@@ -1,11 +1,10 @@
 import sys
 
 import seaborn as sb
-import serial
 from PyQt5 import QtCore, QtWidgets
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
-from datastream11 import Datastream
+from datastream import Datastream
 
 
 class Canvas(FigureCanvas):
