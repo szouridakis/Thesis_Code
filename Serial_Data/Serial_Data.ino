@@ -12,7 +12,7 @@ products from Adafruit!
 #include <include/twi.h>
 
 #include <Wire.h>
-#include "Adafruit_MCP9808.h"
+#include "Adafruit_MCP9808.h"  //add "#define Wire Wire1" on the first row of the cpp file
 #include <Adafruit_AMG88xx.h>
 #include <Adafruit_MLX90614.h>
 #include "DHT.h"
