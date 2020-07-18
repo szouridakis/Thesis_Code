@@ -89,11 +89,11 @@ class MyWindow(QtWidgets.QMainWindow):
         self.label_8.adjustSize()
         self.label_8.move(850, 400)
 
-        self.heat_map = sb.heatmap(self.d.Matrix, vmin=20, vmax=45, annot=True, fmt='', ax=self.canvas.axes)
+        self.heat_map = sb.heatmap(self.d.Matrix, vmin=15, vmax=50, annot=True, fmt='', ax=self.canvas.axes)
 
     def plotData(self):
         self.heat_map.clear()
-        self.heat_map = sb.heatmap(self.d.Matrix, vmin=20, vmax=45, annot=True, fmt='', ax=self.canvas.axes, cbar=False)
+        self.heat_map = sb.heatmap(self.d.Matrix, vmin=15, vmax=50, annot=True, fmt='', ax=self.canvas.axes, cbar=False)
         self.canvas.draw()
         self.label_1.setText("MCP1 Temperature is:" + " " + str(self.d.MCP1_temp) + " °C")
         self.label_1.adjustSize()
