@@ -1,13 +1,4 @@
 
-/**************************************************************************/
-/*!
-This is a demo for the Adafruit MCP9808 breakout
-----> http://www.adafruit.com/products/1782
-Adafruit invests time and resources providing this open source code,
-please support Adafruit and open-source hardware by purchasing
-products from Adafruit!
-*/
-/**************************************************************************/
 #include <Arduino.h>
 #include <include/twi.h>
 
