@@ -27,7 +27,7 @@ data14 = []
 
 ############################ extract data from hdf5 files ###############################
 
-for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp1a/MCP2*.hdf5'):
+for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp1a/MCP1*.hdf5'):
 
     hf = h5py.File(filename, 'r')
 
@@ -37,7 +37,7 @@ for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp1a/MCP
         data1.append(data_set[()])
     hf.close()
 
-for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp1a/MLXAmb*.hdf5'):
+for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp1a/MLXObj*.hdf5'):
 
     hf = h5py.File(filename, 'r')
 
@@ -46,7 +46,7 @@ for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp1a/MLX
         data2.append(data_set[()])
     hf.close()
 
-for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp1b/MCP2*.hdf5'):
+for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp1b/MCP1*.hdf5'):
 
     hf = h5py.File(filename, 'r')
 
@@ -56,7 +56,7 @@ for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp1b/MCP
         data3.append(data_set[()])
     hf.close()
 
-for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp1b/MLXAmb*.hdf5'):
+for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp1b/MLXObj*.hdf5'):
 
     hf = h5py.File(filename, 'r')
 
@@ -65,7 +65,7 @@ for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp1b/MLX
         data4.append(data_set[()])
     hf.close()
 
-for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp1c/MCP2*.hdf5'):
+for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp1c/MCP1*.hdf5'):
 
     hf = h5py.File(filename, 'r')
 
@@ -75,7 +75,7 @@ for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp1c/MCP
         data5.append(data_set[()])
     hf.close()
 
-for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp1c/MLXAmb*.hdf5'):
+for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp1c/MLXObj*.hdf5'):
 
     hf = h5py.File(filename, 'r')
 
@@ -84,7 +84,7 @@ for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp1c/MLX
         data6.append(data_set[()])
     hf.close()
 
-for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp2a/MCP2*.hdf5'):
+for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp2a/MCP1*.hdf5'):
 
     hf = h5py.File(filename, 'r')
 
@@ -94,7 +94,7 @@ for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp2a/MCP
         data7.append(data_set[()])
     hf.close()
 
-for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp2a/MLXAmb*.hdf5'):
+for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp2a/MLXObj*.hdf5'):
 
     hf = h5py.File(filename, 'r')
 
@@ -103,7 +103,7 @@ for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp2a/MLX
         data8.append(data_set[()])
     hf.close()
 
-for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp2b/MCP2*.hdf5'):
+for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp2b/MCP1*.hdf5'):
 
     hf = h5py.File(filename, 'r')
 
@@ -113,7 +113,7 @@ for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp2b/MCP
         data9.append(data_set[()])
     hf.close()
 
-for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp2b/MLXAmb*.hdf5'):
+for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp2b/MLXObj*.hdf5'):
 
     hf = h5py.File(filename, 'r')
 
@@ -122,7 +122,7 @@ for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp2b/MLX
         data10.append(data_set[()])
     hf.close()
 
-for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp3a/MCP2*.hdf5'):
+for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp3a/MCP1*.hdf5'):
 
     hf = h5py.File(filename, 'r')
 
@@ -132,7 +132,7 @@ for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp3a/MCP
         data11.append(data_set[()])
     hf.close()
 
-for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp3a/MLXAmb*.hdf5'):
+for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp3a/MLXObj*.hdf5'):
 
     hf = h5py.File(filename, 'r')
 
@@ -141,7 +141,7 @@ for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp3a/MLX
         data12.append(data_set[()])
     hf.close()
 
-for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp3b/MCP2*.hdf5'):
+for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp3b/MCP1*.hdf5'):
 
     hf = h5py.File(filename, 'r')
 
@@ -151,7 +151,7 @@ for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp3b/MCP
         data13.append(data_set[()])
     hf.close()
 
-for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp3b/MLXAmb*.hdf5'):
+for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp3b/MLXObj*.hdf5'):
 
     hf = h5py.File(filename, 'r')
 
@@ -271,7 +271,7 @@ for i, values in enumerate(cross_cor_arr):
     plt.annotate(values, (exp_ax[i], cross_cor_arr[i]))
 
 plt.yscale("log")
-plt.title('Cross Correlation of MCP2 and MLXAmb values')
+plt.title('Cross Correlation of MCP1 and MLXObj values')
 
 ##plt.plot(timestamps4, data7, label="40 cm ")
 ##plt.plot(timestamps4, data8, label="80 cm ")
@@ -290,8 +290,8 @@ plt.title('Cross Correlation of MCP2 and MLXAmb values')
 ##plt.xlabel('Time on 2020-07-15 from 15:39:22 till 15:59:21') ##2b
 ##plt.xlabel('Time on 2020-07-15 from 16:23:11 till 16:43:10') ##3a
 ##plt.xlabel('Time on 2020-07-15 from 16:54:04 till 17:14:03') ##3b
-#plt.xlabel('Time')
-#plt.ylabel('Temperature')
+plt.xlabel('Experiments')
+plt.ylabel('Values')
 ##plt.ylim(top=5)
 ##plt.ylim(bottom=-4)
 ##plt.xlim(left=9)
@@ -305,8 +305,9 @@ for i, values in enumerate(RMSE_arr):
     plt.annotate(values, (exp_ax[i], RMSE_arr[i]))
 
 ##plt.yscale("log")
-plt.title('Root Mean Square Error of MLXAmb values over MCP2 values')
-
+plt.title('Root Mean Square Error of MLXObj values over MCP1 values')
+plt.xlabel('Experiments')
+plt.ylabel('Values')
 
 plt.figure(3)
 
@@ -315,6 +316,7 @@ for i, values in enumerate(MAE_arr):
     plt.annotate(values, (exp_ax[i], MAE_arr[i]))
 
 ##plt.yscale("log")
-plt.title('Mean Absolute Error of MLXAmb values over MCP2 values')
-
+plt.title('Mean Absolute Error of MLXObj values over MCP1 values')
+plt.xlabel('Experiments')
+plt.ylabel('Values')
 plt.show()
