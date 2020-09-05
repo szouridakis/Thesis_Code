@@ -20,9 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d510116a-0a23-46ac-b8b3-26be73b0d961" name="Default Changelist" comment="plot generator">
-      <change afterPath="$PROJECT_DIR$/data_handler2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_handler2.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_handler2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +72,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="data_handler2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Thesis_Code" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_handler2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="foo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Thesis_Code" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -96,6 +117,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.data_handler" />
+        <item itemvalue="Python.data_handler2" />
         <item itemvalue="Python.foo" />
       </list>
     </recent_temporary>
@@ -118,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597773702067</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="plot generator">
+      <created>1599299085484</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1599299085484</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -142,22 +171,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595515921367" />
-    <state width="1897" height="150" key="GridCell.Tab.0.bottom" timestamp="1599235861239">
+    <state width="1897" height="151" key="GridCell.Tab.0.bottom" timestamp="1599305833595">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1897" height="150" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599235861239" />
-    <state width="1897" height="150" key="GridCell.Tab.0.center" timestamp="1599235861239">
+    <state width="1897" height="151" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599305833595" />
+    <state width="1897" height="151" key="GridCell.Tab.0.center" timestamp="1599305833595">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1897" height="150" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599235861239" />
-    <state width="1897" height="150" key="GridCell.Tab.0.left" timestamp="1599235861239">
+    <state width="1897" height="151" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599305833595" />
+    <state width="1897" height="151" key="GridCell.Tab.0.left" timestamp="1599305833595">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1897" height="150" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599235861239" />
-    <state width="1897" height="150" key="GridCell.Tab.0.right" timestamp="1599235861239">
+    <state width="1897" height="151" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599305833595" />
+    <state width="1897" height="151" key="GridCell.Tab.0.right" timestamp="1599305833595">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1897" height="150" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599235861239" />
+    <state width="1897" height="151" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599305833595" />
     <state x="322" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597773748825">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

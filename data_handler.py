@@ -24,6 +24,13 @@ data11 = []
 data12 = []
 data13 = []
 data14 = []
+sub1 = []
+sub2 = []
+sub3 = []
+sub4 = []
+sub5 = []
+sub6 = []
+sub7 = []
 
 ############################ extract data from hdf5 files ###############################
 
@@ -176,85 +183,107 @@ for filename in glob.glob('C:/Users/Stelios/Desktop/Thesis/experiments/exp3b/MLX
 cross_cor_arr = [0,0,0,0,0,0,0]
 RMSE_arr = [0,0,0,0,0,0,0]
 MAE_arr = [0,0,0,0,0,0,0]
+mean_arr = []
+var_arr =[]
 
 
-RMSE1 = metrics.mean_squared_error(data1, data2, squared="False")
-MAE1 = metrics.mean_absolute_error(data1, data2)
+#RMSE1 = metrics.mean_squared_error(data1, data2, squared="False")
+#MAE1 = metrics.mean_absolute_error(data1, data2)
 
-data1 = (data1 - np.mean(data1)) / (np.std(data1) *len(data1))
-data2 = (data2 - np.mean(data2)) / (np.std(data2))
-cross_cor1 = np.correlate(data1,data2)
-cross_cor_arr[0] = cross_cor1[0]
-RMSE_arr[0] = round(RMSE1,2)
-MAE_arr[0] = round(MAE1,2)
+#data1 = (data1 - np.mean(data1)) / (np.std(data1) *len(data1))
+#data2 = (data2 - np.mean(data2)) / (np.std(data2))
+#cross_cor1 = np.correlate(data1,data2)
+#cross_cor_arr[0] = cross_cor1[0]
+#RMSE_arr[0] = round(RMSE1,2)
+#MAE_arr[0] = round(MAE1,2)
+sub1 = np.subtract(data1,data2)
+mean_arr.append(round(sub1.mean(),3))
+var_arr.append(round(sub1.var(),3))
 
+del data3[:100]  #the first 29 samples on MLXObj in experiment 1B are not normal because of calibration
+del data4[:100]
+#RMSE2 = metrics.mean_squared_error(data3, data4, squared="False")
+#MAE2 = metrics.mean_absolute_error(data3, data4)
 
-del data3[:29]  #the first 29 samples on MLXObj in experiment 1B are not normal because of calibration
-del data4[:29]
-RMSE2 = metrics.mean_squared_error(data3, data4, squared="False")
-MAE2 = metrics.mean_absolute_error(data3, data4)
-
-data3 = (data3 - np.mean(data3)) / (np.std(data3) *len(data3))
-data4 = (data4 - np.mean(data4)) / (np.std(data4))
-cross_cor2 = np.correlate(data3,data4)
-cross_cor_arr[1] = cross_cor2[0]
-RMSE_arr[1] = round(RMSE2,2)
-MAE_arr[1] = round(MAE2,2)
-
-
-RMSE3 = metrics.mean_squared_error(data5, data6, squared="False")
-MAE3 = metrics.mean_absolute_error(data5, data6)
-
-data5 = (data5 - np.mean(data5)) / (np.std(data5) *len(data5))
-data6 = (data6 - np.mean(data6)) / (np.std(data6))
-cross_cor3 = np.correlate(data5,data6)
-cross_cor_arr[2] = cross_cor3[0]
-RMSE_arr[2] = round(RMSE3,2)
-MAE_arr[2] = round(MAE3,2)
+#data3 = (data3 - np.mean(data3)) / (np.std(data3) *len(data3))
+#data4 = (data4 - np.mean(data4)) / (np.std(data4))
+#cross_cor2 = np.correlate(data3,data4)
+#cross_cor_arr[1] = cross_cor2[0]
+#RMSE_arr[1] = round(RMSE2,2)
+#MAE_arr[1] = round(MAE2,2)
+sub2 = np.subtract(data3,data4)
+mean_arr.append(round(sub2.mean(),3))
+var_arr.append(round(sub2.var(),3))
 
 
-RMSE4 = metrics.mean_squared_error(data7, data8, squared="False")
-MAE4 = metrics.mean_absolute_error(data7, data8)
+#RMSE3 = metrics.mean_squared_error(data5, data6, squared="False")
+#MAE3 = metrics.mean_absolute_error(data5, data6)
 
-data7 = (data7 - np.mean(data7)) / (np.std(data7) *len(data7))
-data8 = (data8 - np.mean(data8)) / (np.std(data8))
-cross_cor4 = np.correlate(data7,data8)
-cross_cor_arr[3] = cross_cor4[0]
-RMSE_arr[3] = round(RMSE4,2)
-MAE_arr[3] = round(MAE4,2)
-
-
-RMSE5 = metrics.mean_squared_error(data9, data10, squared="False")
-MAE5 = metrics.mean_absolute_error(data9, data10)
-
-data9 = (data9 - np.mean(data9)) / (np.std(data9) *len(data9))
-data10 = (data10 - np.mean(data10)) / (np.std(data10))
-cross_cor5 = np.correlate(data9,data10)
-cross_cor_arr[4] = cross_cor5[0]
-RMSE_arr[4] = round(RMSE5,2)
-MAE_arr[4] = round(MAE5,2)
+#data5 = (data5 - np.mean(data5)) / (np.std(data5) *len(data5))
+#data6 = (data6 - np.mean(data6)) / (np.std(data6))
+#cross_cor3 = np.correlate(data5,data6)
+#cross_cor_arr[2] = cross_cor3[0]
+#RMSE_arr[2] = round(RMSE3,2)
+#MAE_arr[2] = round(MAE3,2)
+sub3 = np.subtract(data5,data6)
+mean_arr.append(round(sub3.mean(),3))
+var_arr.append(round(sub3.var(),3))
 
 
-RMSE6 = metrics.mean_squared_error(data11, data12, squared="False")
-MAE6 = metrics.mean_absolute_error(data11, data12)
+#RMSE4 = metrics.mean_squared_error(data7, data8, squared="False")
+#MAE4 = metrics.mean_absolute_error(data7, data8)
 
-data11 = (data11 - np.mean(data11)) / (np.std(data11) *len(data11))
-data12 = (data12 - np.mean(data12)) / (np.std(data12))
-cross_cor6 = np.correlate(data11,data12)
-cross_cor_arr[5] = cross_cor6[0]
-RMSE_arr[5] = round(RMSE6,2)
-MAE_arr[5] = round(MAE6,2)
+#data7 = (data7 - np.mean(data7)) / (np.std(data7) *len(data7))
+#data8 = (data8 - np.mean(data8)) / (np.std(data8))
+#cross_cor4 = np.correlate(data7,data8)
+#cross_cor_arr[3] = cross_cor4[0]
+#RMSE_arr[3] = round(RMSE4,2)
+#MAE_arr[3] = round(MAE4,2)
+sub4 = np.subtract(data7,data8)
+mean_arr.append(round(sub4.mean(),3))
+var_arr.append(round(sub4.var(),3))
 
 
-RMSE7 = metrics.mean_squared_error(data13, data14, squared="False")
-MAE7 = metrics.mean_absolute_error(data13, data14)
+#RMSE5 = metrics.mean_squared_error(data9, data10, squared="False")
+#MAE5 = metrics.mean_absolute_error(data9, data10)
 
-data13 = (data13 - np.mean(data13)) / (np.std(data13) *len(data13))
-data14 = (data14 - np.mean(data14)) / (np.std(data14))
-cross_cor7 = np.correlate(data13,data14)
-cross_cor_arr[6] = cross_cor7[0]
-RMSE_arr[6] = round(RMSE7,2)
-MAE_arr[6] = round(MAE7,2)
+#data9 = (data9 - np.mean(data9)) / (np.std(data9) *len(data9))
+#data10 = (data10 - np.mean(data10)) / (np.std(data10))
+#cross_cor5 = np.correlate(data9,data10)
+#cross_cor_arr[4] = cross_cor5[0]
+#RMSE_arr[4] = round(RMSE5,2)
+#MAE_arr[4] = round(MAE5,2)
+sub5 = np.subtract(data9,data10)
+mean_arr.append(round(sub5.mean(),3))
+var_arr.append(round(sub5.var(),3))
+
+
+#RMSE6 = metrics.mean_squared_error(data11, data12, squared="False")
+#MAE6 = metrics.mean_absolute_error(data11, data12)
+
+#data11 = (data11 - np.mean(data11)) / (np.std(data11) *len(data11))
+#data12 = (data12 - np.mean(data12)) / (np.std(data12))
+#cross_cor6 = np.correlate(data11,data12)
+#cross_cor_arr[5] = cross_cor6[0]
+#RMSE_arr[5] = round(RMSE6,2)
+#MAE_arr[5] = round(MAE6,2)
+sub6 = np.subtract(data11,data12)
+mean_arr.append(round(sub6.mean(),3))
+var_arr.append(round(sub6.var(),3))
+
+
+#RMSE7 = metrics.mean_squared_error(data13, data14, squared="False")
+#MAE7 = metrics.mean_absolute_error(data13, data14)
+
+#data13 = (data13 - np.mean(data13)) / (np.std(data13) *len(data13))
+#data14 = (data14 - np.mean(data14)) / (np.std(data14))
+#cross_cor7 = np.correlate(data13,data14)
+#cross_cor_arr[6] = cross_cor7[0]
+#RMSE_arr[6] = round(RMSE7,2)
+#MAE_arr[6] = round(MAE7,2)
+sub7 = np.subtract(data13,data14)
+mean_arr.append(round(sub7.mean(),3))
+var_arr.append(round(sub7.var(),3))
 
 exp_ax = ["1a", "1b", "1c", "2a", "2b", "3a", "3b"]
 
@@ -267,8 +296,8 @@ exp_ax = ["1a", "1b", "1c", "2a", "2b", "3a", "3b"]
 #for i in range(len(timestamps1)):
 #   timestamps4.append(i)
 
-for i in range(len(data4)):
-    timestamps5.append(i)
+#for i in range(len(data4)):
+#    timestamps5.append(i)
 
 # for i in range(len(timestamps3)):
 #    timestamps6.append(i)
@@ -287,7 +316,7 @@ for i in range(len(data4)):
 ############################ plot data #################################
 
 
-plt.figure()
+#plt.figure()
 #plt.plot(cross_cor1)
 #plt.plot(timestamps4,cross_cor2)
 
@@ -298,26 +327,10 @@ plt.figure()
 #plt.yscale("log")
 #plt.title('Cross Correlation of MCP1 and MLXObj values')
 
-plt.plot(timestamps5, data3, label="MCP1 on Object ")
-plt.plot(timestamps5, data4, label="MCP2 Ambient")
-plt.plot(timestamps4, data9, label="Thermal Camera MAX")
-plt.plot(timestamps4, data1, label="Thermal Camera MIN")
-plt.plot(timestamps4, data2, label="MLX Object")
-plt.plot(timestamps5, data3, label="MLX Ambient")
-##plt.plot(timestamps5, data4, label="MLX 80")
-##plt.legend(loc="upper right")
 
-##plt.xlabel('Time on 2020-07-15 from 13:34:29 till 14:04:29') ##1a
-##plt.xlabel('Time on 2020-07-14 from 18:37:20 till 19:07:19') ##1b remove the first 29 samples because of MLX Calibration
-plt.xlabel('Time on 2020-07-14 from 18:38:03 till 19:07:19') ##1b remove the first 29 samples because of MLX Calibration
-##plt.xlabel('Time on 2020-07-15 from 14:32:47 till 15:02:46') ##1c
-##plt.xlabel('Time on 2020-07-15 from 15:11:37 till 15:31:37') ##2a
-##plt.xlabel('Time on 2020-07-15 from 15:39:22 till 15:59:21') ##2b
-##plt.xlabel('Time on 2020-07-15 from 16:23:11 till 16:43:10') ##3a
-##plt.xlabel('Time on 2020-07-15 from 16:54:04 till 17:14:03') ##3b
-plt.title('Experiment 1A\n\nNormalized Cross Correlation between MCP2 and MLX Ambient Temperature Values')
+#plt.title('Experiment 1A\n\nNormalized Cross Correlation between MCP1 and MLX Object Temperature Values')
 #plt.xlabel('Samples')
-plt.ylabel('Temperature')
+#plt.ylabel('Normalized Cross-Correlation')
 
 #ymax = cross_cor1.max()
 #xpos = np.argmax(cross_cor1)
@@ -331,7 +344,7 @@ plt.ylabel('Temperature')
 
 #plt.figure()
 #plt.plot(cross_cor2)
-#plt.title('Experiment 1B\n\nNormalized Cross Correlation between MCP2 and MLX Ambient Temperature Values')
+#plt.title('Experiment 1B\n\nNormalized Cross Correlation between MCP1 and MLX Object Temperature Values')
 #plt.xlabel('Samples')
 #plt.ylabel('Normalized Cross-Correlation')
 #ymax = cross_cor2.max()
@@ -365,7 +378,7 @@ plt.ylabel('Temperature')
 #plt.xlabel('Experiments')
 #plt.ylabel('Values')
 
-#plt.figure()
+plt.figure()
 #plt.plot(cross_cor4)
 #plt.title('Experiment 2A\n\nNormalized Cross Correlation between MCP2 and MLX Ambient Temperature Values')
 #plt.xlabel('Samples')
@@ -374,7 +387,18 @@ plt.ylabel('Temperature')
 #xpos = np.argmax(cross_cor4)
 #plt.annotate(ymax, xy=(xpos, ymax))
 
-#plt.figure()
+plt.bar(exp_ax, mean_arr, width=0.2, align= 'center')
+for i, values in enumerate(mean_arr):
+    plt.annotate(values, (exp_ax[i], mean_arr[i]))
+
+plt.title('Mean of the difference of MCP1 - MLXObj values')
+plt.xlabel('Experiments')
+plt.ylabel('Values')
+
+
+
+
+plt.figure()
 #plt.plot(cross_cor5)
 #plt.title('Experiment 2B\n\nNormalized Cross Correlation between MCP2 and MLX Ambient Temperature Values')
 #plt.xlabel('Samples')
@@ -382,6 +406,14 @@ plt.ylabel('Temperature')
 #ymax = cross_cor5.max()
 #xpos = np.argmax(cross_cor5)
 #plt.annotate(ymax, xy=(xpos, ymax))
+
+plt.bar(exp_ax, var_arr, width=0.2, align= 'center')
+for i, values in enumerate(var_arr):
+    plt.annotate(values, (exp_ax[i], var_arr[i]))
+
+plt.title('Variance of the difference of MCP1 - MLXObj values')
+plt.xlabel('Experiments')
+plt.ylabel('Values')
 
 #plt.figure()
 #plt.plot(cross_cor6)
