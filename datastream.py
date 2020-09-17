@@ -11,7 +11,7 @@ STOP = b'S'
 class Datastream:
 
     def __init__(self):
-        self.SerialData = serial.Serial('com7', 9600)
+        self.SerialData = serial.Serial('com4', 9600)
 
         self.Matrix = [[0.0 for x in range(8)] for y in range(8)]  # create a Matrix full of zeros
         self.x = 0  # initialize variables to zero
