@@ -1,9 +1,13 @@
 import sys
-import seaborn as sb
+
 from PyQt5 import QtCore, QtWidgets
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
-from datastream import Datastream
+from datastream11 import Datastream
+import seaborn as sb
+import numpy as np
+import math
+from scipy.interpolate import griddata
 
 
 class Canvas(FigureCanvas):
@@ -88,11 +92,15 @@ class MyWindow(QtWidgets.QMainWindow):
         self.label_8.adjustSize()
         self.label_8.move(850, 400)
 
-        self.heat_map = sb.heatmap(self.d.Matrix, vmin=15, vmax=50, annot=True, fmt='', ax=self.canvas.axes)
+        self.interpolated_img = [[0.0 for x in range(32)] for y in range(32)]
+        self.heat_map = sb.heatmap(self.interpolated_img, vmin=25, vmax=40, annot=False, fmt='', ax=self.canvas.axes)
+        #self.heat_map = sb.heatmap(self.interpolated_img, annot=False, fmt='', ax=self.canvas.axes)
+
 
     def plotData(self):
         self.heat_map.clear()
-        self.heat_map = sb.heatmap(self.d.Matrix, vmin=15, vmax=50, annot=True, fmt='', ax=self.canvas.axes, cbar=False)
+        self.heat_map = sb.heatmap(self.interpolated_img.reshape(32, 32), vmin=25, vmax=40, annot=False, fmt='', ax=self.canvas.axes, cbar=False)
+        #self.heat_map = sb.heatmap(self.interpolated_img.reshape(32, 32), annot=False, fmt='', ax=self.canvas.axes, cbar=False)
         self.canvas.draw()
         self.label_1.setText("MCP1 Temperature is:" + " " + str(self.d.MCP1_temp) + " °C")
         self.label_1.adjustSize()
@@ -121,6 +129,7 @@ class MyWindow(QtWidgets.QMainWindow):
     def readData(self):
         self.d.readData()
         if self.d.READING_COMPLETED:
+            self.Bicubic()
             self.plotData()
             self.d.READING_COMPLETED = False
 
@@ -137,6 +146,23 @@ class MyWindow(QtWidgets.QMainWindow):
         self.d.cleardict()
         self.d.SerialStop()
         self.plotData()
+
+    def Bicubic(self):
+
+        # pylint: disable=invalid-slice-index
+        points = [(math.floor(ix / 8), (ix % 8)) for ix in range(0, 64)]
+        grid_x, grid_y = np.mgrid[0:7:32j, 0:7:32j]
+
+        # read the pixels
+        pixels = []
+        numpy_matrix = np.array(self.d.Matrix)
+        #print("numpy_matrix.shape", numpy_matrix.shape)
+        original_image = numpy_matrix.reshape(64,1)
+        #print("original_image.shape", original_image.shape)
+        for row in original_image:
+            pixels.append(row)
+
+        self.interpolated_img = griddata(points, pixels, (grid_x, grid_y), method='cubic')
 
 
 if __name__ == '__main__':
